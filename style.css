@@ -1,0 +1,541 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+section {
+    padding: 100px;
+}
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+header.sticky
+{
+    background: #fff;
+    padding: 22px 100px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+header .logo
+{
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+header.sticky .logo
+{
+    color: #111;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header ul li
+{
+    position: relative;
+    list-style: none;
+}
+header ul li a
+{
+    font-size: 22px;
+    position: relative;
+    display: inline-block;
+    margin: 0  15px;
+    color: #fff;
+    text-decoration: none;
+}
+header.sticky ul li a
+{
+    color: #111;
+}
+.heading
+{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+    color: #111;
+}
+.heading h2
+{
+    font-weight: 600;
+    font-size: 40px;
+}
+.content
+{
+    display: flex;
+    justify-content: space-between;
+}
+.contentBx
+{
+    padding-right: 30px;
+}
+.contentBx h3
+{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.w50
+{
+    min-width: 50%;
+}
+.btn span
+{
+    position: absolute;
+    display: block;
+}
+.btn span:nth-child(1)
+{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg,transparent,#03e9f4);
+    animation: animate1 1s linear infinite;
+}
+@keyframes animate1
+{
+    0%
+    {
+        left: -100%;
+    }
+    50%,100%
+    {
+        left: 100%;
+    }
+    
+}
+.btn span:nth-child(2)
+{
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg,transparent,#03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+@keyframes animate2
+{
+    0%
+    {
+        top: -100%;
+    }
+    50%,100%
+    {
+        top: 100%;
+    }
+    
+}
+.btn span:nth-child(3)
+{
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg,transparent,#03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+@keyframes animate3
+{
+    0%
+    {
+        right: -100%;
+    }
+    50%,100%
+    {
+        right: 100%;
+    }
+    
+}
+.btn span:nth-child(4)
+{
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg,transparent,#03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+@keyframes animate4
+{
+    0%
+    {
+        bottom: -100%;
+    }
+    50%,100%
+    {
+        bottom: 100%;
+    }
+    
+}
+
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background: url(fedrick.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.banner h2
+{
+    font-size: 70px;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.banner h3
+{
+    font-size: 2.5em;
+    color: #fff;
+    font-family: 'poppins', sans-serif;
+    font-weight: 500;
+    line-height: 1.5em;
+    margin-left: 18px;
+}
+.banner a
+{
+    font-size: 2em;
+    font-weight: 700;
+}
+.btn
+{
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 0;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+}
+.btn:hover
+{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+.contact
+{
+    background: #111;
+}
+.formBx
+{
+    min-width: 60%;
+}
+.formBx form
+{
+    display: flex;
+    flex-direction: column;
+}
+.formBx form h3,
+.contactInfo h3
+{
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.formBx form input,
+.formBx form textarea
+{
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background: #222;
+    color: #fff;
+    resize: none;
+}
+.formBx form textarea
+{
+    min-height: 180px;
+}
+.formBx form input::placeholder
+.formBx form textarea::placeholder
+{
+    color: #999;
+}
+.formBx form input[type="button"]
+{
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 10px 180px;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+}
+
+.formBx form input[type="button"]:hover
+{
+    background: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 200px #03e9f4;
+}
+
+
+.contactInfo
+{
+    min-width: 40%;
+}
+.contactInfoBx
+{
+    position: relative;
+}
+.contactInfoBx .box
+{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.contactInfoBx .box .icon
+{
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 24px;
+}
+.contactInfoBx .box .text
+{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+.contactInfoBx .box .text h3
+{
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: 0;
+}
+.copyright
+{
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+.skills
+{
+    background: #101010;
+}
+.skills .heading
+{
+    color: #fff;
+}
+.skSec
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 100px;
+
+}
+.container, .container2
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.container .card, .container2 .card
+{
+    position: relative;
+    width: 250px;
+    background: linear-gradient(0deg, #1b1b1b,#222,#1b1b1b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border-radius: 4px;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+}
+.container .card:hover, .container2 .card:hover
+{
+    transform: translateY(-20px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .5);
+}
+.container .card:before, .container2 .card:before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .03);
+    pointer-events: none;
+    z-index: 1;
+}
+.percent
+{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: inset 0 0 50px #000;
+    background: #222;
+    z-index: 10;
+}
+.percent .number
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.percent .number h2
+{
+    color: #777;
+    font-weight: 700;
+    font-size: 30px;
+    transition: 0.5s;
+}
+.card:hover .percent .number h2
+{
+    color: #fff;
+    font-size: 60px;
+}
+.percent .number h2 span
+{
+    font-size: 24px;
+    color: #777;
+    transition: 0.5s;
+}
+.card:hover .percent .number h2 span
+{
+    color: #fff;
+}
+.text
+{
+    position: relative;
+    color: #777;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s;
+}
+.card:hover .text
+{
+    color: #fff;
+}
+svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    z-index: 1000;
+}
+svg circle
+{
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #191919;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+svg circle:nth-child(2)
+{
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+.card:nth-child(1) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #00ff43;
+}
+.card:nth-child(2) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke: #00a1ff;
+}
+.card:nth-child(3) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 95) / 100);
+    stroke: #ff04f7;
+}
+.card:nth-child(4) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke: #E3EA6E;
+}
+.card:nth-child(5) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: #EC8716;
+}
+.container2 .card:nth-child(1) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #EC1616;
+}
+.container2 .card:nth-child(2) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke: #fff;
+}
+.container2 .card:nth-child(3) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke: #01FE6F;
+}
+.container2 .card:nth-child(4) svg circle:nth-child(2)
+{
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: #18F5E9;
+}
+hr{
+    color:white;
+}
